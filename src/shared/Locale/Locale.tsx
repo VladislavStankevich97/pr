@@ -9,6 +9,7 @@ import { Dispatch } from "redux";
 import { setMap, setLocation } from "../../redux/actions/actions";
 import "./Locale.css"
 import Tooltip from "@material-ui/core/Tooltip";
+import { Img } from '../../Components/dynamucComponents/WomensShoes/style'
 
 interface LocaleProps {
 
@@ -93,11 +94,12 @@ const Locale: React.FC<LocalePrivateProps> = ({
                 className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-              <div style={{ display: "flex" }}>
-                <Tooltip title="Поле обазятальное для заполнения">
-                  <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                <p style={{ marginTop: "3px" }}> &nbsp; адресс</p>
-              </div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <p>адресс &nbsp;</p>
+                  <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                    <Img src="/img/info.svg" alt="no picture" />
+                  </Tooltip>
+                </div>
               </label>
               <input
                 style={{ backgroundColor: colorInput }}
@@ -133,7 +135,7 @@ const Locale: React.FC<LocalePrivateProps> = ({
         </Grid>
         <Grid item xs={11}>
           <div className="w-full lg:w-12/12 px-4">
-          <div className="relative w-full mb-3">
+            <div className="relative w-full mb-3">
               <label
                 className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                 htmlFor="grid-password"

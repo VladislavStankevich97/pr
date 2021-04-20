@@ -21,7 +21,7 @@ const Menu: React.FC<MenuPrivateProps> = ({ modal }) => {
       {modal && <Modal title={modal.title} setOpen={modal.setOpen} save={modal.save} Component={modal.component} tableDataFunc={modal} />}
       <Sidebar />
       <div
-        className="relative md:ml-64 bg-blueGray-100" style={{}}>
+        className="relative md:ml-64 bg-blueGray-100">
         <HeaderStats />
         <div className="px-4 md:px-10 mx-auto w-full -m-24" style={{ marginTop: '50px', width: '100%' }}>
           <Switch>

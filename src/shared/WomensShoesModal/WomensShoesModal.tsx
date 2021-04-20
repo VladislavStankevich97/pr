@@ -5,6 +5,9 @@ import { Dispatch } from "redux";
 import { RootState } from "../../redux/reducers/rootReducer";
 import { closeModal, openModal } from "../../redux/actions/actions";
 import Table from "../Table/Table";
+import { Container, Main, Footer, WomensShoesContainer } from './style'
+
+
 interface ModalProps {
   setOpen: (value: boolean) => void;
   title: string;
@@ -33,7 +36,6 @@ const WomensShoesModal: React.FC<ModalPrivateProps> = ({
   return (
     <>
       <div
-        className="inset-0 z-50 outline-none focus:outline-none"
         style={{
           top: 10,
           left: 10,
@@ -42,12 +44,9 @@ const WomensShoesModal: React.FC<ModalPrivateProps> = ({
           overflow: "hidden"
         }}
       >
-        <div
-          className="relative w-auto my-6 mx-auto max-w-6xl"
-          style={{ width: "100%" }}
-        >
-          <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-            <div  className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+        <Container>
+          <Main>
+            <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
               <h3 className="text-3xl font-semibold">{title}</h3>
               <button
                 className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -60,13 +59,13 @@ const WomensShoesModal: React.FC<ModalPrivateProps> = ({
                 </span>
               </button>
             </div>
-            <div className="relative p-6 flex-auto">
+            <WomensShoesContainer className="relative p-6 flex-auto">
               <WomensShoes />
-            </div>
-          </div>
-        </div>
+            </WomensShoesContainer>
+          </Main>
+        </Container>
       </div>
-      <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+      <Footer></Footer>
     </>
   );
 };

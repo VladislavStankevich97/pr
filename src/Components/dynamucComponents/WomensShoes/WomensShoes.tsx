@@ -16,7 +16,7 @@ import { closeModal, openModal } from "../../../redux/actions/actions";
 import Table from "../../../shared/Table/Table";
 import TemplateCreationMProps from "../../../shared/TemplateCreation/TemplateCreation"
 import Tooltip from "@material-ui/core/Tooltip";
-
+import { Container, Main, H6, Block, Input, BlockSelect, BlockLabel, Img, Button } from './style'
 
 interface WomensShoesProps { }
 type Photos = Photo[];
@@ -60,45 +60,44 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
 
   return (
     <>
-      <div
-        className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
-        style={{ margin: 0, boxShadow: "none" }}
+      <Container
+        style={{}}
       >
-        <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-          <h6 className="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"></h6>
+        <Main >
+          <H6></H6>
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-12/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+            <Block>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                  <div style={{ display: "flex" }}>
-                    <Tooltip title="Поле обазятальное для заполнения">
-                      <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                    <p style={{ marginTop: "3px" }}> &nbsp; заголовок</p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>заголовок &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
                   </div>
-                </label>
+                </BlockLabel>
                 <Field
                   component="input"
                   name="Title"
                   type="text"
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                 />
-              </div>
-            </div>
-            <div className="w-full lg:w-12/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </Block>
+            <Block>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; описание</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>описание &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   component="textarea"
                   name="Description"
@@ -106,42 +105,42 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                   rows={4}
                 />
-              </div>
-            </div>
+              </Input>
+            </Block>
           </div>
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; размер</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>размер &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   component="input"
                   type="text"
                   name="Size"
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                 />
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; выберите состояние товара</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>выберите состояние товара &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
 
                 <Field
                   component="select"
@@ -155,20 +154,20 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     Б/у
                   </option>
                 </Field>
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; вид объявления</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>вид объявления &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   component={"select"}
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
@@ -181,25 +180,25 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     Товар от производителя
                   </option>
                 </Field>
-              </div>
-            </div>
+              </Input>
+            </BlockSelect>
           </div>
 
           <hr className="mt-6 border-b-1 border-blueGray-300" />
-          <h6 className="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"></h6>
+          <H6></H6>
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; продвижение</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>продвижение &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   component={"select"}
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
@@ -233,20 +232,20 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     x10_7
                   </option>
                 </Field>
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; размещение</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>размещение &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
 
                 <Field
                   component="select"
@@ -263,81 +262,81 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     Single
                   </option>
                 </Field>
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; имя менеджера</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>имя енеджера &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   name="ManagerName"
                   component="input"
                   type="text"
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                 />
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; телефон</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>телефон &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   name="ContactPhone"
                   component="input"
                   type="text"
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                 />
-              </div>
-            </div>
+              </Input>
+            </BlockSelect>
 
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; цена</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>цена &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   component="input"
                   type="text"
                   name="Price"
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                 />
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                <div style={{ display: "flex" }}>
-                  <Tooltip title="Поле обазятальное для заполнения">
-                    <span style={{ cursor: "pointer", color: "red", fontSize: "1.5em" }}>!</span></Tooltip>
-                  <p style={{ marginTop: "3px" }}> &nbsp; писать по объявлению</p>
-                </div>
-                </label>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <p>писать по объявлению &nbsp;</p>
+                    <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                      <Img src="/img/info.svg" alt="no picture" />
+                    </Tooltip>
+                  </div>
+                </BlockLabel>
                 <Field
                   component={"select"}
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
@@ -350,25 +349,24 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     Нет
                   </option>
                 </Field>
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative w-full mb-3">
-                <label
-                  className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
+              <Input>
+                <BlockLabel
                   htmlFor="grid-password"
                 >
-                  Видео
-                </label>
+                  видео
+                </BlockLabel>
                 <Field
                   name="VideoURL"
                   component="input"
                   type="text"
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                 />
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
+              </Input>
+            </BlockSelect>
+            <BlockSelect>
               <Grid
                 container
                 direction="row"
@@ -377,13 +375,17 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                 spacing={1}
               >
                 <Grid item xs={8}>
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                  <Input>
+                    <BlockLabel
                       htmlFor="grid-password"
                     >
-                      Фото
-                    </label>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <p>фото &nbsp;</p>
+                        <Tooltip style={{ color: "red" }} title="Поле обазятальное для заполнения">
+                          <Img src="/img/info.svg" alt="no picture" />
+                        </Tooltip>
+                      </div>
+                    </BlockLabel>
 
                     <Field
                       component="input"
@@ -391,7 +393,7 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                       name="photo"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     />
-                  </div>
+                  </Input>
                 </Grid>
                 <Grid item xs={4}>
                   {isLoader ? (
@@ -419,13 +421,13 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     )}
                 </Grid>
               </Grid>
-            </div>
+            </BlockSelect>
           </div>
 
           <hr className="mt-6 border-b-1 border-blueGray-300" />
-          <h6 className="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"></h6>
+          <H6></H6>
           <Locale />
-        </div>
+        </Main>
         <hr className="mt-6 border-b-1 border-blueGray-300" />
         <div
           style={{
@@ -435,22 +437,6 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
             justifyContent: "flex-end",
           }}
         >
-          {/* <i className="fas fa-trash-alt" style={{
-            fontSize: "18px",
-            color: 'red',
-            marginBottom: "5px",
-            marginRight: "-19px"
-          }}></i>
-          <button
-            className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            style={{
-              fontSize: "18px",
-            }}
-            type="button"
-            onClick={() => setOpen(false)}
-          >
-            Отменить
-          </button> */}
           <div style={{ cursor: "pointer" }}>
             {
               !buttonActive
@@ -466,8 +452,7 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     }}
                   ></i>
                   <Tooltip title="Заполните все обязательные поля">
-                    <button
-                      className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    <Button
                       style={{
                         color: "gray",
                         paddingLeft: "5px",
@@ -476,11 +461,10 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                       }}
                       type="button"
                       disabled={true}
-                      // title="Заполните все обязательные поля"
                       onClick={() => setOpenTemplateCreation(true)}
                     >
                       Сформировать
-                    </button>
+                    </Button>
                   </Tooltip>
                 </>
                 :
@@ -493,8 +477,7 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                       fontSize: "18px",
                     }}
                   ></i>
-                  <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  <Button
                     style={{
                       color: "rgb(30 166 233)",
                       paddingLeft: "5px",
@@ -505,14 +488,13 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
                     onClick={() => setOpenTemplateCreation(true)}
                   >
                     Сформировать
-          </button>
+          </Button>
                 </>
             }
           </div>
           {openTemplateCreation && <TemplateCreationMProps description={description} photoList={photoList} openTemplateCreation={openTemplateCreation} setOpenTemplateCreation={setOpenTemplateCreation} seeTable={seeTable} />}
           <i className="fas fa-edit" style={{ color: "rgb(64 169 87)", fontSize: "18px", paddingBottom: "6px" }}></i>
-          <button
-            className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          <Button
             type="button"
             onClick={seeTable}
             style={{
@@ -523,9 +505,9 @@ const WomensShoes: React.FC<WomensShoesPrivateProps> = ({
             }}
           >
             Сохранить
-          </button>
+          </Button>
         </div>
-      </div>
+      </Container>
     </>
   );
 };
