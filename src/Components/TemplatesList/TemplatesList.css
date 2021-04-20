@@ -1,0 +1,228 @@
+.header {
+  background-color: rgba(59, 130, 246, 0.5);
+  display: flex;
+  padding: 13px 12px;
+  justify-content: space-evenly;
+}
+
+.form {
+  width: 1266px;
+}
+
+.overflow {
+  overflow: auto;
+  height: 873px;
+}
+
+.body {
+  padding: 10px;
+  padding-top: 0;
+  margin: 10px 122px 10px 117px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #e4e4e7;
+  /* margin-bottom: 20px; */
+  align-items: center;
+  background: #fff;
+  border: 1px solid black;
+}
+
+.picture-container {
+  text-align: center;
+  margin-top: 35px;
+  width: 230px;
+  height: 230px;
+  background-color: #e4e4e7;
+  border-radius: 5px;
+}
+
+.picture-text {
+  text-align: center;
+  color: black;
+  font-size: 13px;
+}
+
+.picture-img {
+  margin: 10px;
+  height: 190px;
+  width: 210px;
+  border-radius: 5px;
+}
+
+.colvo-ob {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.container-yacheek {
+  max-width: 610px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.yacheika {
+  border-radius: 9px;
+  margin: 3px;
+  width: 55px;
+  height: 55px;
+  background-color: #e4e4e7;
+  border-radius: 5px;
+}
+
+.yacheika-text {
+  color: gray;
+  margin-top: 2px;
+  margin-right: 3px;
+  text-align: right;
+  font-size: 13px;
+}
+
+.input-checkbox {
+  margin-top: 35px;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e4e4e7;
+  border-radius: 5px;
+  color: black;
+}
+
+.input {
+  margin-top: -10px;
+  width: 28px;
+}
+
+.checkbox-container {
+  display: flex;
+  font-size: 13px;
+  text-align: center;
+  padding-right: 10px;
+}
+
+@media (max-width: 1690px) {
+  .body {
+    margin: 12px 20px;
+  }
+}
+
+@media (max-width: 1497px) {
+  .body {
+    margin: 12px 10px;
+  }
+  .input-checkbox {
+    width: 184px;
+    height: 184px;
+  }
+  .picture-container {
+    width: 184px;
+    height: 184px;
+  }
+  .picture-text {
+    font-size: 11px;
+  }
+  .picture-img {
+    height: 150px;
+    width: 165px;
+  }
+  .checkbox-container {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1385px) {
+  .input-checkbox {
+    width: 165px;
+    height: 165px;
+  }
+  .picture-container {
+    width: 165px;
+    height: 165px;
+  }
+  .picture-text {
+    font-size: 11px;
+  }
+  .picture-img {
+    height: 130px;
+    width: 145px;
+  }
+  .checkbox-container {
+    font-size: 11px;
+  }
+  .yacheika {
+    width: 45px;
+    height: 45px;
+  }
+  .container-yacheek {
+    max-width: 510px;
+  }
+}
+
+@media (max-width: 1247px) {
+  .input-checkbox {
+    width: 149px;
+    height: 149px;
+  }
+  .picture-container {
+    width: 149px;
+    height: 149px;
+  }
+  .input-checkbox {
+    width: 125px;
+    height: 125px;
+  }
+  .yacheika {
+    width: 40px;
+    height: 40px;
+  }
+  .container-yacheek {
+    max-width: 460px;
+  }
+  .picture-text {
+    font-size: 9px;
+  }
+  .picture-img {
+    height: 115px;
+    width: 130px;
+  }
+  .checkbox-container {
+    font-size: 9px;
+  }
+  .input {
+    margin-top: 0;
+  }
+}
+
+.checkbox {
+  width: 45px;
+}
+
+.checkbox-label {
+  margin-top: 7px;
+}
+
+.MuiInputBase-input {
+  box-sizing: border-box !important;
+  padding: 0;
+}
+
+.PrivateNotchedOutline-root-1 {
+  border-width: 0 !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: none !important;
+}
+
+.MuiInputBase-input {
+  --tw-ring-shadow: none !important;
+}
+
+.MuiOutlinedInput-input {
+  --tw-ring-shadow: none !important;
+}

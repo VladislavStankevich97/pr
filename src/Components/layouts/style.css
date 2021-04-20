@@ -1,0 +1,31 @@
+.main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.container {
+  max-width: 1340px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 50%;
+    color: gray
+}
+
+.body {
+    color: gray;
+    margin-top: 100px;
+}
+
